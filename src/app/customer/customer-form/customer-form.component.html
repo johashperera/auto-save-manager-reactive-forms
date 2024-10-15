@@ -1,0 +1,70 @@
+<div class="row mt-5" [formGroup]="form">
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="first-name"
+        placeholder="First Name"
+        formControlName="firstName"
+        [ngClass]="{ 'is-invalid': form.get('firstName')?.errors }"
+      />
+      <label for="first-name">First Name</label>
+      <div class="invalid-feedback">
+        {{ form.get('firstName')?.errors ? 'First name required' : '' }}
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="last-name"
+        placeholder="Last Name"
+        formControlName="lastName"
+      />
+      <label for="last-name">Last Name</label>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        placeholder="Address"
+        formControlName="address"
+      />
+      <label for="address">Address</label>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email-address"
+        placeholder="Email Address"
+        formControlName="email"
+        [ngClass]="{ 'is-invalid': form.get('email')?.errors }"
+      />
+      <label for="email-address">Email</label>
+      <div class="invalid-feedback">
+        {{ form.get('email')?.errors ? 'Email not valid' : '' }}
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="company"
+        placeholder="Company Name"
+        formControlName="company"
+      />
+      <label for="company">Company</label>
+    </div>
+  </div>
+</div>
